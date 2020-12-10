@@ -246,7 +246,7 @@ NAN_METHOD(testScript) {
 
   t.plan(6);
 
-  ScriptOrigin origin(New("foo").ToLocalChecked(), New(5));
+  ScriptOrigin origin(New("foo").ToLocalChecked(), 5);
 
   t.ok(_( assertType<Script>(New<Script>(
       New("2 + 3").ToLocalChecked()).ToLocalChecked())));
